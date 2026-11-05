@@ -37,6 +37,10 @@ modon = CreateModonLQG(Nz = Nz, U = U, a = a, R_0 = R_0, R = R, beta = beta, ...
 
 disp(['K = ' mat2str(modon.K)])
 
+% Calculate PV gradient:
+
+disp(['β_i - Λ_{ij} U_j  = ' mat2str(modon.params.beta' - modon.linsys.R_ij * modon.params.U_n)])
+
 % Plot psi and Psi in each layer:
 
 F = zeros(Nx, Ny, 2*Nz);

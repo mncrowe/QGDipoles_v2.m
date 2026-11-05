@@ -39,10 +39,16 @@ modon = CreateModonLQG(Nz = Nz, U = U, a = a, R = R, beta = beta, ...
 
 disp(['K = ' mat2str(modon.K)])
 
+% Calculate PV gradient and R:
+
+disp(['β_i - Λ_{ij} U_j  = ' mat2str(modon.params.beta' - modon.linsys.R_ij * modon.params.U_n)])
+R_vec = reshape(modon.params.R, [], 1)';
+disp(['R = ' mat2str(R_vec(2:end-1))])
+
+% Plot Psi(x, y) in top and bottom layers and psi and q at x = 0:
+
 Psi = modon.psi + modon.grid.y .* reshape((U - U_n), 1, 1, Nz);
 psi_q_yi = cat(3, squeeze(modon.psi(Nx/2 + 1, :, :)), squeeze(modon.q(Nx/2 + 1, :, :)));
-
-% Plot Psi(x, y) in each top and bottom layers and psi and q at x = 0:
 
 splot(Psi(:, :, [1 Nz]), modon.grid.x, modon.grid.y, circle_radius = 1, ...
     interpreter = 'latex', show_contours = [-2 -1.5 -1 -0.5 0.5 1 1.5 2], ...
@@ -51,6 +57,6 @@ splot(Psi(:, :, [1 Nz]), modon.grid.x, modon.grid.y, circle_radius = 1, ...
     fig_size = [800 300])
 
 splot(psi_q_yi, modon.grid.y, interpreter = 'latex', show_contours = 6, label_subplots = true, ...
-    panel_array = [2 1], title = {'$\psi_i''(x = 0, y)$', '$q_i(x = 0, y)$'}, ...
+    panel_array = [2 1], title = {'$\psi_i''(x = 0, y)$', '$q''_i(x = 0, y)$'}, ...
     xlim = [-2 2], xlabel = '$y$', ylabel = '$i$', fig_size = [800 300], ...
     y_ticks = 1:Nz, flip_axis = [0 1], label_start = 3)
