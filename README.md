@@ -11,12 +11,12 @@ This repository contains all functions required to create modon solutions. Examp
 
 # Publications
 
-This code (or earlier versions) has been used to produce modon solutions in the following publications:
+This code (or earlier versions) has been used to produce modon solutions in the following publications. Publications marked with a * describe the mathematical theory underlying the numerical method.
 
-- Johnson & Crowe, 2023, Oceanic dipoles in a surface quasi-geostrophic model, J. Fluid. Mech. 958, R2
-- Crowe & Johnson, 2023, The evolution of surface quasi-geostrophic modons on sloping topography, J. Fluid. Mech. 970, A10
-- Crowe & Johnson, 2024, Modon solutions in an N-layer quasi-geostrophic model, J. Fluid Mech., 994, R1
+- Johnson & Crowe*, 2023, Oceanic dipoles in a surface quasi-geostrophic model, J. Fluid. Mech. 958, R2
+- Crowe & Johnson*, 2023, The evolution of surface quasi-geostrophic modons on sloping topography, J. Fluid. Mech. 970, A10
+- Crowe & Johnson*, 2024, Modon solutions in an N-layer quasi-geostrophic model, J. Fluid Mech., 994, R1
 - Crowe, 2025, QGDipoles.jl: A Julia package for calculating dipolar vortex solutions to the Quasi-Geostrophic equations, JOSS, 10 (108)
 - Crowe & Sutyrin, 2025, Symmetry breaking and nonlinear transformation of two-layer eastward propagating dipoles, Phys. Fluids 37 (2)
-- Crowe, 2026, Three-dimensional modons in a quasi-geostrophic model, J. Geophys. Astrophys. Fluid Dyn.
-- Crowe, 2026, N-Layer quasi-geostrophic modons in a vertically sheared flow, in preparation.
+- Crowe*, 2026, Three-dimensional modons in a quasi-geostrophic model, J. Geophys. Astrophys. Fluid Dyn.
+- Crowe*, 2026, N-Layer quasi-geostrophic modons in a vertically sheared flow, in preparation.
